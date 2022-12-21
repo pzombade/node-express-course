@@ -85,7 +85,7 @@ app.delete('/api/course/:id', (req, res) => {
 });
 
 app.get('/', (req, res) => {
-    res.send("Hello node.js + Express!");
+    res.send("Hello node.js + Express + Git Codespace!");
 });
 
 

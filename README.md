@@ -1,14 +1,19 @@
 # nodex-express-course
-Node.js with Express server sample application.
+## _Node.js with Express server sample application._
 
+```sh
 # Start the app
-node index.js
+node start
 
 # Start in dev mode
-nodemon index.js
+npm run dev
+```
+
+### TBD
+Use https://www.npmjs.com/package/swagger-ui-express
 
 
-
+```sh
 ### Get All Courses
 GET http://localhost:5000/api/course
 
@@ -35,3 +40,4 @@ Content-Type:  application/json
     "id":1,
     "name":"H!"
 }
+```
