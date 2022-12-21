@@ -1,2 +1,37 @@
 # nodex-express-course
 Node.js with Express server sample application.
+
+# Start the app
+node index.js
+
+# Start in dev mode
+nodemon index.js
+
+
+
+### Get All Courses
+GET http://localhost:5000/api/course
+
+
+### Get A Course
+GET http://localhost:5000/api/course/4
+
+### Delete A Course
+DELETE http://localhost:5000/api/course/2
+
+### Create A Course
+POST http://localhost:5000/api/course/
+Content-Type:  application/json
+
+{
+    "name":"Hello AWS!"
+}
+
+### Update A Course
+PUT http://localhost:5000/api/course/
+Content-Type:  application/json
+
+{
+    "id":1,
+    "name":"H!"
+}
