@@ -1,9 +1,30 @@
 const express = require("express");
 const Joi = require("joi");
+const swaggerUi = require('swagger-ui-express');
+const swaggerDocument = require('./swagger.json');
+
 
 
 const app = express();
 app.use(express.json());
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+
+
+const swaggerJsdoc = require('swagger-jsdoc');
+
+const options = {
+  definition: {
+    openapi: '3.0.0',
+    info: {
+      title: 'Hello World',
+      version: '1.0.0',
+    },
+  },
+  apis: ['./index.js'], // files containing annotations as above
+};
+
+const openapiSpecification = swaggerJsdoc(options);
+
 const port = process.env.PORT ?? 3000;
 
 const courses = [
